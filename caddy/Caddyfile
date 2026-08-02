@@ -6,6 +6,9 @@
     admin off
 }
 
+http://localhost {
+    respond /healthz "ok" 200
+}
 {$SITE_ADDRESS:80} {
     # === Apps CON UrlBase / APPLICATION_ROOT configurado ===
     # El proxy NO strippea el prefijo: la app sabe su base
